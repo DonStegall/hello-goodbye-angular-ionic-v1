@@ -1,0 +1,7 @@
+{
+  "name": "hello-goodbye-angular-ionic-v1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
