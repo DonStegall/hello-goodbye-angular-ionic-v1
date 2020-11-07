@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -14,7 +15,38 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <h2>{{title}}</h2>
+
+    <p>
+      Input:<br />
+      <input type="text" [(ngModel)]="textInput" />
+    </p>
+
+    <p>
+      <button (click)="handleHello()">Hello</button>
+    </p>
+
+    <p>
+      <button (click)="handleGoodbye()">Goodbye</button>
+    </p>
+
+    <p>
+      <button [disabled]=(!textInput) (click)="handleUpperCase()">Upper Case</button>
+    </p>
+
+    <p>
+      <button [disabled]=(!textInput) (click)="handleLowerCase()">Lower Case</button>
+    </p>
+
+    <p>
+      <button [disabled]=(!textInput) (click)="handleMessage()">Show Input Message</button>
+    </p>
+
+    <p>
+      <button [disabled]=(!textInput) (click)="handleClear()">Clear Input Message</button>
+    </p>
+  
   </div>
+
 </ion-content>
