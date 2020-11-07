@@ -19,32 +19,34 @@
     <h2>{{title}}</h2>
 
     <p>
-      Input:<br />
-      <input type="text" [(ngModel)]="textInput" />
+      <ion-label>
+        Input:<br />
+        <input type="text" [(ngModel)]="textInput" />
+      </ion-label>
     </p>
 
     <p>
-      <button (click)="handleHello()">Hello</button>
+      <ion-button (click)="handleHello()">Hello</ion-button>
     </p>
 
     <p>
-      <button (click)="handleGoodbye()">Goodbye</button>
+      <ion-button (click)="handleGoodbye()">Goodbye</ion-button>
     </p>
 
     <p>
-      <button [disabled]=(!textInput) (click)="handleUpperCase()">Upper Case</button>
+      <ion-button [disabled]=(!textInput) (click)="handleUpperCase()">Upper Case</ion-button>
     </p>
 
     <p>
-      <button [disabled]=(!textInput) (click)="handleLowerCase()">Lower Case</button>
+      <ion-button [disabled]=(!textInput) (click)="handleLowerCase()">Lower Case</ion-button>
     </p>
 
     <p>
-      <button [disabled]=(!textInput) (click)="handleMessage()">Show Input Message</button>
+      <ion-button [disabled]=(!textInput) (click)="handleMessage()">Show Input Message</ion-button>
     </p>
 
     <p>
-      <button [disabled]=(!textInput) (click)="handleClear()">Clear Input Message</button>
+      <ion-button [disabled]=(!textInput) (click)="handleClear()">Clear Input Message</ion-button>
     </p>
   
   </div>
