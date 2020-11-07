@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class HomePage {
 
-  public title = 'hello-goodbye-angular-ionic-v1';
+  public title = 'HomePage';
 
   private textInput: string = null;
 
