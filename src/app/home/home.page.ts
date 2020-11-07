@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,24 @@ import { Component } from '@angular/core';
 
 export class HomePage {
 
-  public title = 'HomePage';
+  constructor(public alertController: AlertController)
+  {
+  }
+
+  private title = 'HomePage';
 
   private textInput: string = null;
+
+  private async showInput() {
+    const alert = await this.alertController.create({
+      header: 'Input Contents',
+      subHeader: 'value of input field is:',
+      message: this.textInput,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
 
   public handleHello() {
     this.textInput = 'Hello';
@@ -29,7 +45,7 @@ export class HomePage {
   }
 
   public handleMessage() {
-    alert(this.textInput);
+    this.showInput();
   }
 
   public handleClear() {
